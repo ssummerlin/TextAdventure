@@ -6,14 +6,19 @@ import main.com.adventure.world.objects.Tangible;
 import main.com.adventure.world.objects.Weapon;
 import main.com.adventure.world.objects.keys.Key;
 
+import java.util.Objects;
+
 public class Player {
 
     public int level = 5;
+    private String name = "";
     private int currentLocationIndex = AppSettings.getStartingLocation();
     private Key key;
     private Shovel shovel;
     private int power = 1;
     private int health = 10;
+
+    private Backpack backpack = new Backpack();
 
     /**
      * Sprint 2 Module 1
@@ -21,8 +26,10 @@ public class Player {
      * inform the user that the name has been changed by saying "Your name is now {name}".
      * @param newName - the player's name that will be saved
      */
-    public void setName(String newName) {
-
+    public String setName(String newName) {
+        name = newName;
+        System.out.println("Your name is now " + name);
+        return newName;
     }
 
     /**
@@ -32,7 +39,7 @@ public class Player {
      * @return The name of the player
      */
     public String getName() {
-        return "";
+        return name;
     }
 
     /**
@@ -42,7 +49,13 @@ public class Player {
      * @return true if the player's level is enough to open the door.
      */
     public boolean canOpenDoor() {
-        return false;
+        float levelDividedByTwo = (float) this.level / 2;
+        /// access the level variable
+        /// divide the level variable by 2
+        // take that result and determine if it's greater than 2
+        var canOpenDoor = levelDividedByTwo > 2;
+
+        return  canOpenDoor;
     }
 
 
@@ -68,7 +81,21 @@ public class Player {
      * @return true if the move is executed. Otherwise, false.
      */
     public boolean move(String direction, boolean isValidDirection) {
-        return true;
+        if(isValidDirection){
+            if (Objects.equals(direction, "EAST")) {
+                currentLocationIndex ++;
+                isValidDirection =  true;
+
+            } else if(Objects.equals(direction, "WEST")) {
+                currentLocationIndex -- ;
+                isValidDirection =  true;
+            }
+        }else {
+            System.out.printf("%s is not a valid direction ", direction);
+            isValidDirection =  false;
+        }
+        return isValidDirection;
+
     }
 
     /**
@@ -78,7 +105,8 @@ public class Player {
      * @param item - the weapon that will be used to adjust the player's power.
      */
     public void setWeapon(Weapon item) {
-        //TODO Complete this function in Sprint 3 Module 2
+
+
     }
 
     /**
@@ -88,8 +116,9 @@ public class Player {
      * @return the item or null if the item does not exist
      */
     public Tangible getItem(String itemName) {
-        //TODO Complete this function in Sprint 3 Module 3
-        return null;
+        name = itemName;
+        System.out.println("Your item name is now " + name);
+        return this.backpack.getItem(itemName);
     }
 
     /**
@@ -99,6 +128,7 @@ public class Player {
      * @return the removed item
      */
     public Tangible removeItem(Tangible item) {
+
         //TODO Complete this function in Sprint 3 Module 3
         return null;
     }

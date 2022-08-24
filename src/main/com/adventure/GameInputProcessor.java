@@ -3,17 +3,24 @@ package main.com.adventure;
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
 
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
+import java.util.Scanner;
+import java.util.StringJoiner;
 
 public class GameInputProcessor {
+    private static Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+    public String objectName = "";
 
     /**
      * Asks the user for their next command.
      * @return the response from the user.
      */
     public String prompt() {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your next command:");
-        return "";
+        String line = scanner.nextLine();
+        return line;
     }
 
     /**
@@ -29,7 +36,12 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        return new Command("");
+
+        input = input.substring(0,input.indexOf(' '));
+        Command command = new Command(input);
+
+
+        return command;
     }
 
     /**
@@ -52,7 +64,20 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        return new Command("", "");
+        if(input.split(" ").length > 1){
+            String firstWord = input.split(" ") [0];
+            String secondWord = input.split(" ") [1];
+            Command command = new Command(firstWord, secondWord);
+            return command;
+
+
+        }
+        else{
+            input=input.trim();
+            Command command = new Command(input);
+            return command;
+
+        }
     }
 
 

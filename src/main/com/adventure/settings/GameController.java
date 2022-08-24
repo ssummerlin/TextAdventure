@@ -221,13 +221,13 @@ public class GameController {
     private void getName() {
         System.out.println("\n\nBefore we get started, what's your name?");
         String name = scanner.next();
-        player.setName(name);
-        if (player.getName().isEmpty()) {
+
+        if (!player.getName().isEmpty()) {
+            System.out.println("Welcome " + player.getName() + "!");
+        } else {
             System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " +
                     "the getName function.");
             gameOver();
-        } else {
-            System.out.println("Welcome " + player.getName() + "!");
         }
     }
 
