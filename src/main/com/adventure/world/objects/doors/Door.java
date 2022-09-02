@@ -14,20 +14,39 @@ import main.com.adventure.world.objects.keys.Key;
  */
 
 public class Door implements Tangible {
+    public int level;
+    public Door(){
+        this.level = 1;
+        this.isOpen= false;
+    }
+    public Door(boolean isOpen, int level) {
+        this.level = level;
+        this.isOpen = isOpen;
+    }
 
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+    }
+
+    public void setOpen(boolean open) {
+        isOpen = open;
+    }
+    //TODO Add a level property
+    //TODO Add a default (i.e. no params) constructor here
+    //TODO Add a constructor that takes an isOpen and level and saves both
     private boolean isOpen = false;
 
-    //TODO Add a level property
 
-    //TODO Add a default (i.e. no params) constructor here
-
-    //TODO Add a constructor that takes an isOpen and level and saves both
 
     private boolean isKeyValid(Key key) {
         //TODO Update doorLevel so it references the level of this door
-        int doorLevel = -1;
 
-        return key != null && key.getLevel() == doorLevel;
+
+        return key != null && key.getLevel() == this.level;
     }
 
     public boolean isOpen() {

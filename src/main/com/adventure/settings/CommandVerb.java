@@ -1,5 +1,7 @@
 package main.com.adventure.settings;
 
+import java.util.Locale;
+
 /**
  * Sprint 3 Module 1
  * This CommandVerb will be used instead of strings once we've learned about Enums.
@@ -26,7 +28,15 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-        return INVALID;
-    }
+        verbString = verbString.toUpperCase();
 
+        try {
+            CommandVerb verb = CommandVerb.valueOf(verbString);
+            return verb;
+        } catch (Exception e) {
+            return INVALID;
+        }
+
+
+    }
 }

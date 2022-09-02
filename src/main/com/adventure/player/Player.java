@@ -39,6 +39,7 @@ public class Player {
      * @return The name of the player
      */
     public String getName() {
+
         return name;
     }
 

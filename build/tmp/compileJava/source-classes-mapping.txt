@@ -32,14 +32,16 @@ main/com/adventure/CombatController.java
  main.com.adventure.CombatController
 main/com/adventure/world/objects/keys/ConsoleKey.java
  main.com.adventure.world.objects.keys.ConsoleKey
+main/com/adventure/world/objects/HoleContent.java
+ main.com.adventure.world.objects.HoleContent
 main/com/adventure/world/objects/Tangible.java
  main.com.adventure.world.objects.Tangible
 main/com/adventure/world/objects/TangibleListener.java
  main.com.adventure.world.objects.TangibleListener
 main/com/adventure/world/scenes/SceneFactory.java
  main.com.adventure.world.scenes.SceneFactory
-main/com/adventure/world/scenes/s2_m3/OutsideCaveScene.java
- main.com.adventure.world.scenes.s2_m3.OutsideCaveScene
+main/com/adventure/GameInputProcessor.java
+ main.com.adventure.GameInputProcessor
 main/com/adventure/world/scenes/s2_m2/ConsoleScene.java
  main.com.adventure.world.scenes.s2_m2.ConsoleScene
 main/com/adventure/world/scenes/s3_m2/MonsterSwordScene.java
@@ -62,8 +64,8 @@ main/com/adventure/world/objects/keys/Key.java
  main.com.adventure.world.objects.keys.Key
 main/com/adventure/settings/CommandVerb.java
  main.com.adventure.settings.CommandVerb
-main/com/adventure/world/scenes/s2_m2/TwoPathsScene.java
- main.com.adventure.world.scenes.s2_m2.TwoPathsScene
+main/com/adventure/settings/GameController.java
+ main.com.adventure.settings.GameController
 main/com/adventure/settings/AppSettings.java
  main.com.adventure.settings.AppSettings
  main.com.adventure.settings.AppSettings$1
@@ -78,7 +80,7 @@ main/com/adventure/Main.java
  main.com.adventure.Main
 main/com/adventure/world/scenes/s2_m2/HallwayDoorScene.java
  main.com.adventure.world.scenes.s2_m2.HallwayDoorScene
-main/com/adventure/GameInputProcessor.java
- main.com.adventure.GameInputProcessor
-main/com/adventure/settings/GameController.java
- main.com.adventure.settings.GameController
+main/com/adventure/world/scenes/s2_m2/TwoPathsScene.java
+ main.com.adventure.world.scenes.s2_m2.TwoPathsScene
+main/com/adventure/world/scenes/s2_m3/OutsideCaveScene.java
+ main.com.adventure.world.scenes.s2_m3.OutsideCaveScene

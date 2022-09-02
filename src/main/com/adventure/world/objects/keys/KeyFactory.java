@@ -2,6 +2,9 @@ package main.com.adventure.world.objects.keys;
 
 public class KeyFactory {
 
+    public KeyFactory() {
+    }
+
     /**
      * Creates a key based on the given params.
      * @param level - the key's level
@@ -9,8 +12,12 @@ public class KeyFactory {
      * @return a key
      */
     public static Key buildKey(int level, String name) {
+       Key key = new Key(level, name);
+
+
+
         //TODO Pass level and name into the key constructor when the proper constructor is built
-        Key key = new Key();
+
         return key;
     }
 }
