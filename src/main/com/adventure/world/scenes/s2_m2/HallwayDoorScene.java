@@ -10,7 +10,7 @@ import java.util.List;
 
 public class HallwayDoorScene implements Scene {
 
-    private Door door = new Door();
+    private final Door door = new Door();
 
     /**
      * Creates the hallway door scene and sets the door's open state to false.

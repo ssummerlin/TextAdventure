@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.adventure.MT6" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-09-01T13:30:08" hostname="SAMSUTTMAN-PC" time="4.821">
+<testsuite name="com.adventure.MT6" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-09-09T14:43:19" hostname="SAMSUTTMAN-PC" time="2.888">
   <properties/>
-  <testcase name="testCommandHelp()" classname="com.adventure.MT6" time="4.754"/>
-  <testcase name="testCommandMove()" classname="com.adventure.MT6" time="0.027"/>
-  <testcase name="testCommandUse()" classname="com.adventure.MT6" time="0.009"/>
+  <testcase name="testCommandHelp()" classname="com.adventure.MT6" time="2.824"/>
+  <testcase name="testCommandMove()" classname="com.adventure.MT6" time="0.005"/>
+  <testcase name="testCommandUse()" classname="com.adventure.MT6" time="0.032"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

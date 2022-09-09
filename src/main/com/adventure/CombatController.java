@@ -5,8 +5,8 @@ import main.com.adventure.world.Monster;
 
 public class CombatController {
 
-    private Player player;
-    private Monster monster;
+    private final Player player;
+    private final Monster monster;
 
     /**
      * Processes a combat situation between the player and a monster.

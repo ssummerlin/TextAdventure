@@ -9,7 +9,7 @@ import java.util.Scanner;
 import java.util.StringJoiner;
 
 public class GameInputProcessor {
-    private static Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+    private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
     public String objectName = "";
 
     /**
@@ -37,7 +37,7 @@ public class GameInputProcessor {
      */
     private Command buildSimpleCommand(String input) {
 
-        input = input.substring(0,input.indexOf(' '));
+        input = input.substring(0,input.indexOf(' ' ));
         Command command = new Command(input);
 
 
@@ -64,16 +64,15 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        if(input.split(" ").length > 1){
+        if (input.split(" ").length > 1){
             String firstWord = input.split(" ") [0];
             String secondWord = input.split(" ") [1];
             Command command = new Command(firstWord, secondWord);
             return command;
 
-
-        }
+            }
         else{
-            input=input.trim();
+            input = input.trim();
             Command command = new Command(input);
             return command;
 

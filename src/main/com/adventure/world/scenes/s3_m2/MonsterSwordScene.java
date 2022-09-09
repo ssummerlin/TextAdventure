@@ -13,7 +13,7 @@ import java.util.List;
 
 public class MonsterSwordScene implements Scene {
 
-    private Monster monster = new Monster("Oger", 5, 10);
+    private final Monster monster = new Monster("Oger", 5, 10);
     private Weapon sword = new Weapon("sword", 10);
 
     @Override

@@ -3,7 +3,7 @@ package main.com.adventure.world.objects;
 import main.com.adventure.world.objects.keys.Key;
 
 public class Hole {
-    private HoleContent holeContent;
+    private final HoleContent holeContent;
 
 
     /**

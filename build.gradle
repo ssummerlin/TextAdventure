@@ -116,7 +116,7 @@ test {
 
                 def scoringPercentage = result.testCount - result.failedTestCount
                 if (scoringPercentage < 0) {
-                    scoringPercentage = 0.0;
+                    scoringPercentage = 0.0
                 }
 
                 scoringPercentage = scoringPercentage / result.testCount

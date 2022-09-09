@@ -7,13 +7,13 @@ public class HoleContent {
         return "";
 
 
-    };
+    }
     private boolean isCovered = true;
-    private Key content;
+    private final Key content;
     public HoleContent(Key key) {
         content = key;
 
-    };
+    }
 
 
     public void setIsCovered(boolean isCovered) {

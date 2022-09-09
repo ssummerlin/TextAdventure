@@ -35,10 +35,7 @@ public class Command {
     public String getVerb() {
         return verb;
 
-
-}
-
-
+    }
 
     public void setVerb(String verb) {
         this.verb = verb;

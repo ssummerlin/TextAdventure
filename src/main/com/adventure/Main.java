@@ -7,8 +7,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static GameController controller = new GameController();
-    private static Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+    private static final GameController controller = new GameController();
+    private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
     /**
      * The main function that gets run when the program starts.

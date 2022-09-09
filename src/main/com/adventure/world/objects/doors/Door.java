@@ -17,7 +17,7 @@ public class Door implements Tangible {
     public int level;
     public Door(){
         this.level = 1;
-        this.isOpen= false;
+        this.isOpen = false;
     }
     public Door(boolean isOpen, int level) {
         this.level = level;
@@ -81,10 +81,7 @@ public class Door implements Tangible {
     @Override
     public Boolean canUse(Tangible item) {
         Key key = (Key) item;
-        if (isKeyValid(key)) {
-            return true;
-        }
-        return false;
+        return isKeyValid(key);
     }
 
     @Override

@@ -15,21 +15,21 @@ public class Player {
     private int currentLocationIndex = AppSettings.getStartingLocation();
     private Key key;
     private Shovel shovel;
-    private int power = 1;
     private int health = 10;
 
-    private Backpack backpack = new Backpack();
+    private final Backpack backpack = new Backpack();
 
     /**
      * Sprint 2 Module 1
      * Saves the player's name. This file should store the name so it can be referenced later. After setting the name,
      * inform the user that the name has been changed by saying "Your name is now {name}".
+     *
      * @param newName - the player's name that will be saved
      */
-    public String setName(String newName) {
+    public void setName(String newName) {
         name = newName;
         System.out.println("Your name is now " + name);
-        return newName;
+
     }
 
     /**
@@ -83,15 +83,16 @@ public class Player {
      */
     public boolean move(String direction, boolean isValidDirection) {
         if(isValidDirection){
-            if (Objects.equals(direction, "EAST")) {
+            if(Objects.equals(direction, "EAST")) {
                 currentLocationIndex ++;
                 isValidDirection =  true;
 
-            } else if(Objects.equals(direction, "WEST")) {
+            }
+            else if(Objects.equals(direction, "WEST")) {
                 currentLocationIndex -- ;
                 isValidDirection =  true;
             }
-        }else {
+        } else {
             System.out.printf("%s is not a valid direction ", direction);
             isValidDirection =  false;
         }
@@ -182,6 +183,7 @@ public class Player {
     }
 
     public int getPower() {
+        int power = 1;
         return power;
     }
 }
