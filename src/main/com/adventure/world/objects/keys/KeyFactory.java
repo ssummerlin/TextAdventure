@@ -11,7 +11,7 @@ public class KeyFactory {
      * @return a key
      */
     public static Key buildKey(int level, String name) {
-         Key key = new Key(level, name);
+        Key key = new Key(level, name);
 
 
 

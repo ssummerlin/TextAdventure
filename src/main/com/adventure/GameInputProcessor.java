@@ -1,5 +1,6 @@
 package main.com.adventure;
 
+
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
 
@@ -9,6 +10,7 @@ import java.util.Scanner;
 
 public class GameInputProcessor {
     private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
+    private String input;
 
 
     /**
@@ -34,6 +36,7 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
+        this.input = input;
 
         input = input.substring(0, input.indexOf(' '));
         Command command = new Command(input);
@@ -68,8 +71,7 @@ public class GameInputProcessor {
             Command command = new Command(firstWord, secondWord);
             return command;
 
-        }
-        else {
+        } else {
             input = input.trim();
             Command command = new Command(input);
             return command;

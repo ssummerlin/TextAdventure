@@ -86,8 +86,7 @@ public class Player {
             if (Objects.equals(direction, "EAST")) {
                 currentLocationIndex ++;
                 return true;
-        }
-            else if (Objects.equals(direction, "WEST")) {
+            } else if (Objects.equals(direction, "WEST")) {
                 currentLocationIndex -- ;
                 return true;
             }

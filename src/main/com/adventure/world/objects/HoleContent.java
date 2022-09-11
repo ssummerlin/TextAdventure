@@ -12,7 +12,7 @@ public class HoleContent {
 
     private boolean isCovered = true;
 
-    public HoleContent (){
+    public HoleContent(){
 
     }
 
@@ -30,6 +30,7 @@ public class HoleContent {
 
     }
     public Key getKey(){
+
         return null;
     }
 

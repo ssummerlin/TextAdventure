@@ -4,8 +4,8 @@ main/com/adventure/world/objects/Weapon.java
  main.com.adventure.world.objects.Weapon
 main/com/adventure/world/scenes/IMonsterScene.java
  main.com.adventure.world.scenes.IMonsterScene
-main/com/adventure/settings/CommandVerb.java
- main.com.adventure.settings.CommandVerb
+main/com/adventure/settings/Command.java
+ main.com.adventure.settings.Command
 main/com/adventure/player/Backpack.java
  main.com.adventure.player.Backpack
 main/com/adventure/world/scenes/SceneDescriptionNotFoundException.java
@@ -34,22 +34,22 @@ main/com/adventure/world/Direction.java
  main.com.adventure.world.Direction
 main/com/adventure/world/scenes/s3_m2/MonsterScene.java
  main.com.adventure.world.scenes.s3_m2.MonsterScene
+main/com/adventure/world/scenes/s3_m2/MonsterSwordScene.java
+ main.com.adventure.world.scenes.s3_m2.MonsterSwordScene
+main/com/adventure/Main.java
+ main.com.adventure.Main
+main/com/adventure/world/scenes/SceneFactory.java
+ main.com.adventure.world.scenes.SceneFactory
 main/com/adventure/world/objects/HoleContent.java
  main.com.adventure.world.objects.HoleContent
 main/com/adventure/world/scenes/s2_m4/DigEscapeScene.java
  main.com.adventure.world.scenes.s2_m4.DigEscapeScene
-main/com/adventure/world/scenes/SceneFactory.java
- main.com.adventure.world.scenes.SceneFactory
 main/com/adventure/GameInputProcessor.java
  main.com.adventure.GameInputProcessor
-main/com/adventure/settings/Command.java
- main.com.adventure.settings.Command
 main/com/adventure/world/objects/doors/OmniDoor.java
  main.com.adventure.world.objects.doors.OmniDoor
 main/com/adventure/world/scenes/s2_m2/ConsoleScene.java
  main.com.adventure.world.scenes.s2_m2.ConsoleScene
-main/com/adventure/world/scenes/s3_m2/MonsterSwordScene.java
- main.com.adventure.world.scenes.s3_m2.MonsterSwordScene
 main/com/adventure/player/Player.java
  main.com.adventure.player.Player
 main/com/adventure/world/scenes/s2_m1/CaveEscapeScene.java
@@ -60,27 +60,27 @@ main/com/adventure/world/World.java
  main.com.adventure.world.World
  main.com.adventure.world.World$1
  main.com.adventure.world.World$ConsoleEscapeTangibleListener
-main/com/adventure/world/scenes/s2_m3/OutsideCaveScene.java
- main.com.adventure.world.scenes.s2_m3.OutsideCaveScene
+main/com/adventure/world/objects/keys/KeyFactory.java
+ main.com.adventure.world.objects.keys.KeyFactory
 main/com/adventure/world/objects/Hole.java
  main.com.adventure.world.objects.Hole
 main/com/adventure/world/objects/keys/Key.java
  main.com.adventure.world.objects.keys.Key
+main/com/adventure/settings/CommandVerb.java
+ main.com.adventure.settings.CommandVerb
 main/com/adventure/settings/GameController.java
  main.com.adventure.settings.GameController
 main/com/adventure/world/objects/doors/DoorFactory.java
  main.com.adventure.world.objects.doors.DoorFactory
-main/com/adventure/world/scenes/s2_m2/HallwayDoorScene.java
- main.com.adventure.world.scenes.s2_m2.HallwayDoorScene
+main/com/adventure/world/scenes/s2_m3/HouseScene.java
+ main.com.adventure.world.scenes.s2_m3.HouseScene
 main/com/adventure/CombatController.java
  main.com.adventure.CombatController
 main/com/adventure/world/objects/doors/Door.java
  main.com.adventure.world.objects.doors.Door
-main/com/adventure/Main.java
- main.com.adventure.Main
 main/com/adventure/world/objects/keys/ConsoleKey.java
  main.com.adventure.world.objects.keys.ConsoleKey
-main/com/adventure/world/objects/keys/KeyFactory.java
- main.com.adventure.world.objects.keys.KeyFactory
-main/com/adventure/world/scenes/s2_m3/HouseScene.java
- main.com.adventure.world.scenes.s2_m3.HouseScene
+main/com/adventure/world/scenes/s2_m2/HallwayDoorScene.java
+ main.com.adventure.world.scenes.s2_m2.HallwayDoorScene
+main/com/adventure/world/scenes/s2_m3/OutsideCaveScene.java
+ main.com.adventure.world.scenes.s2_m3.OutsideCaveScene
