@@ -12,7 +12,7 @@ public class DoorFactory {
 
         //TODO Pass the isOpen and level parameters into the door constructor when it's available
 
-        Door door = new Door(isOpen,level);
+        Door door = new Door(isOpen, level);
 
         return door;
     }

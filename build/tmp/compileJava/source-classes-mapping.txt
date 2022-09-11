@@ -60,8 +60,8 @@ main/com/adventure/world/World.java
  main.com.adventure.world.World
  main.com.adventure.world.World$1
  main.com.adventure.world.World$ConsoleEscapeTangibleListener
-main/com/adventure/world/objects/keys/KeyFactory.java
- main.com.adventure.world.objects.keys.KeyFactory
+main/com/adventure/world/scenes/s2_m3/OutsideCaveScene.java
+ main.com.adventure.world.scenes.s2_m3.OutsideCaveScene
 main/com/adventure/world/objects/Hole.java
  main.com.adventure.world.objects.Hole
 main/com/adventure/world/objects/keys/Key.java
@@ -70,8 +70,8 @@ main/com/adventure/settings/GameController.java
  main.com.adventure.settings.GameController
 main/com/adventure/world/objects/doors/DoorFactory.java
  main.com.adventure.world.objects.doors.DoorFactory
-main/com/adventure/world/scenes/s2_m3/HouseScene.java
- main.com.adventure.world.scenes.s2_m3.HouseScene
+main/com/adventure/world/scenes/s2_m2/HallwayDoorScene.java
+ main.com.adventure.world.scenes.s2_m2.HallwayDoorScene
 main/com/adventure/CombatController.java
  main.com.adventure.CombatController
 main/com/adventure/world/objects/doors/Door.java
@@ -80,7 +80,7 @@ main/com/adventure/Main.java
  main.com.adventure.Main
 main/com/adventure/world/objects/keys/ConsoleKey.java
  main.com.adventure.world.objects.keys.ConsoleKey
-main/com/adventure/world/scenes/s2_m2/HallwayDoorScene.java
- main.com.adventure.world.scenes.s2_m2.HallwayDoorScene
-main/com/adventure/world/scenes/s2_m3/OutsideCaveScene.java
- main.com.adventure.world.scenes.s2_m3.OutsideCaveScene
+main/com/adventure/world/objects/keys/KeyFactory.java
+ main.com.adventure.world.objects.keys.KeyFactory
+main/com/adventure/world/scenes/s2_m3/HouseScene.java
+ main.com.adventure.world.scenes.s2_m3.HouseScene

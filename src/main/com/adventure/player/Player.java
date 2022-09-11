@@ -82,21 +82,20 @@ public class Player {
      * @return true if the move is executed. Otherwise, false.
      */
     public boolean move(String direction, boolean isValidDirection) {
-        if(isValidDirection){
-            if(Objects.equals(direction, "EAST")) {
+        if (isValidDirection){
+            if (Objects.equals(direction, "EAST")) {
                 currentLocationIndex ++;
-                isValidDirection =  true;
-
-            }
-            else if(Objects.equals(direction, "WEST")) {
+                return true;
+        }
+            else if (Objects.equals(direction, "WEST")) {
                 currentLocationIndex -- ;
-                isValidDirection =  true;
+                return true;
             }
         } else {
             System.out.printf("%s is not a valid direction ", direction);
-            isValidDirection =  false;
+            return false;
         }
-        return isValidDirection;
+        return true;
 
     }
 
@@ -182,8 +181,5 @@ public class Player {
         this.health = health;
     }
 
-    public int getPower() {
-        int power = 1;
-        return power;
-    }
+
 }

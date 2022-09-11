@@ -24,7 +24,7 @@ public enum CommandVerb {
 
     /**
      * Takes verbString to determine and return the associated CommandVerb.
-     * @param verbString - the verb from the user input
+     * @param verbString - the verb from the user input.
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {

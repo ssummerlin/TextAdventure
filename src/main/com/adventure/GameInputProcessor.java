@@ -6,18 +6,16 @@ import main.com.adventure.settings.CommandConstants;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.StringJoiner;
 
 public class GameInputProcessor {
     private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
-    public String objectName = "";
+
 
     /**
      * Asks the user for their next command.
      * @return the response from the user.
      */
     public String prompt() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your next command:");
         String line = scanner.nextLine();
         return line;
@@ -37,7 +35,7 @@ public class GameInputProcessor {
      */
     private Command buildSimpleCommand(String input) {
 
-        input = input.substring(0,input.indexOf(' ' ));
+        input = input.substring(0, input.indexOf(' '));
         Command command = new Command(input);
 
 
@@ -70,8 +68,8 @@ public class GameInputProcessor {
             Command command = new Command(firstWord, secondWord);
             return command;
 
-            }
-        else{
+        }
+        else {
             input = input.trim();
             Command command = new Command(input);
             return command;

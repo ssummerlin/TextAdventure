@@ -11,7 +11,7 @@ public class Hole {
      * @param content - the item that is covered by the hole.
      */
     public Hole(Key content) {
-       this.holeContent = new HoleContent(content);
+        this.holeContent = new HoleContent();
 
 
     }

@@ -23,20 +23,28 @@ public class Key implements Tangible {
     //TODO variable for level and name needed here
 
     //TODO Add default (i.e. no params) constructor here
-    public Key (){
+
+    /**
+     * Checks the status of the hole.
+     * identifies level of the key.
+     * @param Key - shows the level of key.
+     * string name identifies name of player
+     * Combines Key level and player name
+     */
+
+    public Key(){
         this.name = "key";
         this.level = 1;
 
     }
     //TODO add constructor that takes a level, and saves it
-    public Key (int level){
+    public Key(int level){
         this.level = level;
         this.name = "key";
 
-
     }
     //TODO add constructor that takes a level and name, and saves it
-    public Key (int level, String name){
+    public Key(int level, String name){
         this.level = level;
         this.name = name;
 

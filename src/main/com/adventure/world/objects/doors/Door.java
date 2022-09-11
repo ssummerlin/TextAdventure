@@ -15,9 +15,21 @@ import main.com.adventure.world.objects.keys.Key;
 
 public class Door implements Tangible {
     public int level;
+
+    /**
+     * Sprint 2 Module 3
+     * @param level - door weight
+     * @param Door - item you want to open
+     */
     public Door(){
         this.level = 1;
         this.isOpen = false;
+
+    /*
+      Sprint 2 Module 3
+      @param level - door weight
+     * @param Door - item you want to open
+     */
     }
     public Door(boolean isOpen, int level) {
         this.level = level;
