@@ -1,6 +1,6 @@
 package main.com.adventure.settings;
 
-import java.util.Locale;
+
 
 /**
  * Sprint 3 Module 1
@@ -28,7 +28,7 @@ public enum CommandVerb {
      * @return - the CommandVerb associated with the given input.
      */
     public static CommandVerb getVerb(String verbString) {
-        verbString = verbString.toUpperCase();
+        String temp = verbString.toUpperCase();
 
         try {
             CommandVerb verb = CommandVerb.valueOf(verbString);

@@ -12,6 +12,9 @@ public class HoleContent {
 
     private boolean isCovered = true;
 
+    /**
+     * Checks the status of the hole.
+     */
     public HoleContent(){
 
     }
@@ -29,12 +32,10 @@ public class HoleContent {
         return this.isCovered;
 
     }
-    public Key getKey(){
+    public Key getKey() {
 
         return null;
     }
-
-
 
 
 }

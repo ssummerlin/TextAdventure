@@ -15,21 +15,24 @@ import main.com.adventure.world.objects.keys.Key;
 
 public class Door implements Tangible {
     public int level;
+    private boolean isOpen;
+
     /**
      * Sprint 2 Module 3.
      * level - door weight
      * Door - function of door
      */
-    public Door(){
+    public Door() {
         this.level = 1;
         this.isOpen = false;
 
-/*
-  *Sprint 2 Module 3
-  *@param level - door weight
-  *@param Door - item you want to open
-*/
+
     }
+    /**
+     *  Boolean function for the door.
+     * @param isOpen - state of door.
+     * @param level - players ability to open door.
+     */
     public Door(boolean isOpen, int level) {
         this.level = level;
         this.isOpen = isOpen;
@@ -39,7 +42,7 @@ public class Door implements Tangible {
     //TODO Add a level property
     //TODO Add a default (i.e. no params) constructor here
     //TODO Add a constructor that takes an isOpen and level and saves both
-    private boolean isOpen;
+
 
 
 
@@ -49,7 +52,6 @@ public class Door implements Tangible {
 
         return key != null && key.getLevel() == this.level;
     }
-
     public boolean isOpen() {
         return isOpen;
     }

@@ -27,24 +27,29 @@ public class Key implements Tangible {
     /**
      * Checks the status of the hole.
      * identifies level of the key.
-     * @param Key - shows the level of key.
-     * string name identifies name of player
-     * Combines Key level and player name
      */
 
-    public Key(){
+    public Key() {
         this.name = "key";
         this.level = 1;
 
     }
+    /**
+     * @param level - level of player
+     * identifies level of the key.
+     */
     //TODO add constructor that takes a level, and saves it
-    public Key(int level){
+    public Key(int level) {
         this.level = level;
         this.name = "key";
 
     }
+    /**
+     * @param level - level of player
+     * @param name - String name of player
+     */
     //TODO add constructor that takes a level and name, and saves it
-    public Key(int level, String name){
+    public Key(int level, String name) {
         this.level = level;
         this.name = name;
 

@@ -1,6 +1,5 @@
 package main.com.adventure;
 
-
 import main.com.adventure.settings.Command;
 import main.com.adventure.settings.CommandConstants;
 
@@ -10,7 +9,7 @@ import java.util.Scanner;
 
 public class GameInputProcessor {
     private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
-    private String input;
+
 
 
     /**
@@ -19,8 +18,9 @@ public class GameInputProcessor {
      */
     public String prompt() {
         System.out.println("Enter your next command:");
-        String line = scanner.nextLine();
-        return line;
+        String other = scanner.nextLine();
+        System.out.println(" ");
+        return other;
     }
 
     /**
@@ -36,13 +36,12 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and blank object
      */
     private Command buildSimpleCommand(String input) {
-        this.input = input;
-
-        input = input.substring(0, input.indexOf(' '));
-        Command command = new Command(input);
 
 
-        return command;
+        String temp = input.substring(0, input.indexOf(' '));
+
+
+        return new Command(temp);
     }
 
     /**
@@ -65,16 +64,14 @@ public class GameInputProcessor {
      * @return - the Command object with the proper verb and object
      */
     private Command buildCommandWithObject(String input) {
-        if (input.split(" ").length > 1){
+        if (input.split(" ").length > 1) {
             String firstWord = input.split(" ") [0];
             String secondWord = input.split(" ") [1];
-            Command command = new Command(firstWord, secondWord);
-            return command;
+            return new Command(firstWord, secondWord);
 
         } else {
-            input = input.trim();
-            Command command = new Command(input);
-            return command;
+            String sand = input.trim();
+            return new Command(sand);
 
         }
     }

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.adventure.MT5" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-09-11T18:10:58" hostname="SAMSUTTMAN-PC" time="0.196">
-  <properties/>
-  <testcase name="testScene()" classname="com.adventure.MT5" time="0.188"/>
-  <testcase name="testHole()" classname="com.adventure.MT5" time="0.005"/>
-  <system-out><![CDATA[Door is now open
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
