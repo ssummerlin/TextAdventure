@@ -40,13 +40,13 @@ public class MT3 {
 
     @Test
     public void testPrompt2() {
-        GameInputProcessor processor = new GameInputProcessor();
+        GameInputProcessor processortwo = new GameInputProcessor();
         String input = "Another hello world";
         InputStream in = new ByteArrayInputStream(input.getBytes());
 
         System.setIn(in);
 
-        assertEquals(input, processor.prompt());
+        assertEquals(input, processortwo.prompt());
     }
 
     @Test
