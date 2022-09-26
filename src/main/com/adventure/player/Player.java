@@ -10,8 +10,8 @@ import java.util.Objects;
 
 public class Player {
 
-    public int level = 5;
-    private String name = "";
+    public int level = 1;
+    private String name = " ";
     private int currentLocationIndex = AppSettings.getStartingLocation();
     private Key key;
     private Shovel shovel;
@@ -26,10 +26,11 @@ public class Player {
      *
      * @param newName - the player's name that will be saved
      */
-    public void setName(String newName) {
-        name = newName;
-        System.out.println("Your name is now " + name);
+    public String setName(String newName) {
+        this.name = newName;
 
+        System.out.println("Your name is now " + newName);
+		return name;
     }
 
     /**
@@ -40,7 +41,8 @@ public class Player {
      */
     public String getName() {
 
-        return name;
+        this.name = name;
+		return name;
     }
 
     /**

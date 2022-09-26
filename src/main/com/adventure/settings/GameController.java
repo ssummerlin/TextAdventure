@@ -43,10 +43,8 @@ public class GameController {
             if (player.canOpenDoor()) {
                 System.out.println("You have the power to open the door! You go through!");
             } else {
-                System.out.println("Eh, you don't have the power to open a door. Not much of an adventurer...");
-            }
-            gameOver();
-        } else {
+	            System.out.println( "Eh, you don't have the power to open a door. Not much of an adventurer..." );
+            } } {
             getNextCommand();
         }
     }
@@ -220,9 +218,10 @@ public class GameController {
 
     private void getName() {
         System.out.println("\n\nBefore we get started, what's your name?");
+		Scanner scanner = new Scanner(System.in);
         String name = scanner.next();
 
-        if (!player.getName().isEmpty()) {
+        if (player.getName() == "null") {
             System.out.println("Welcome " + player.getName() + "!");
         } else {
             System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " +

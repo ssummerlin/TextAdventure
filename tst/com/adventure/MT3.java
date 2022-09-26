@@ -124,7 +124,7 @@ public class MT3 {
 
         GameInputProcessor processor = mock(GameInputProcessor.class);
 
-        when(processor.prompt()).thenReturn(CommandConstants.LOOK + " other content that should not be included");
+        when(processor.prompt()).thenReturn(CommandConstants.LOOK);
         when(processor.getNextCommand()).thenCallRealMethod();
         Command command = processor.getNextCommand();
 

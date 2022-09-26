@@ -18,8 +18,8 @@ public class GameInputProcessor {
      */
     public String prompt() {
         System.out.println("Enter your next command:");
+		Scanner scanner = new Scanner(System.in);
         String other = scanner.nextLine();
-        System.out.println(" ");
         return other;
     }
 
@@ -38,10 +38,10 @@ public class GameInputProcessor {
     private Command buildSimpleCommand(String input) {
 
 
-        String temp = input.substring(0, input.indexOf(' '));
+        String verb = input.toLowerCase(Locale.ROOT);
+		String objectName = "";
 
-
-        return new Command(temp);
+        return new Command(verb, objectName);
     }
 
     /**
@@ -65,9 +65,9 @@ public class GameInputProcessor {
      */
     private Command buildCommandWithObject(String input) {
         if (input.split(" ").length > 1) {
-            String firstWord = input.split(" ") [0];
-            String secondWord = input.split(" ") [1];
-            return new Command(firstWord, secondWord);
+            String verb = input.split(" ") [0];
+            String objectName = input.split(" ") [1];
+            return new Command(verb, objectName);
 
         } else {
             String sand = input.trim();
