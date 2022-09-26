@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public class Player {
 
-    public int level = 1;
+    public int level = 5;
     private String name = " ";
     private int currentLocationIndex = AppSettings.getStartingLocation();
     private Key key;
