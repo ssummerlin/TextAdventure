@@ -5,9 +5,8 @@ import main.com.adventure.settings.CommandConstants;
 
 import java.util.Locale;
 import java.util.Scanner;
-public class GameInputProcessor
-        extends main.com.adventure.settings.CommandConstants() ;
-                  implements GameInputProcessors();
+public class GameInputProcessor extends main.com.adventure.settings.CommandConstants() ;
+                implements GameInputProcessors();
 
     public String processInput(Scanner scanner) {
         String input;
