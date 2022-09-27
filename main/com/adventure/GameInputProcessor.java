@@ -41,9 +41,8 @@ public class GameInputProcessor extends main.com.adventure.settings.CommandConst
     public Command buildCommandWithObject(String input, String objectName)
         if  buildCommandwithObject
         {
-            return new Command(input, objectName);}
-        else
-        {
+            return new Command(input, objectName);
+        } else {
         return new Command(input,"");
         null;
         }
@@ -53,7 +52,7 @@ public class GameInputProcessor extends main.com.adventure.settings.CommandConst
     static {
         return prompt( "What would you like to do? " );
     }
-        }
+        
 
 
     /**
