@@ -20,6 +20,7 @@ public class GameInputProcessor {
      */
     public String prompt() {
         System.out.println("Enter your next command:");
+        Scanner scanner = new Scanner(System.in);
         String other = scanner.next();
 		return other;
 
