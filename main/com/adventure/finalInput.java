@@ -6,4 +6,3 @@ class finalInput extends main.com.adventure.gameInputProcessorBuilder {
 		super();
 	}
 }
-}
