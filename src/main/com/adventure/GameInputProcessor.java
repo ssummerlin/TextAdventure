@@ -7,6 +7,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Scanner;
 
+
+
 public class GameInputProcessor {
     private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
@@ -18,9 +20,9 @@ public class GameInputProcessor {
      */
     public String prompt() {
         System.out.println("Enter your next command:");
-		Scanner scanner = new Scanner(System.in);
-        String other = scanner.nextLine();
-        return other;
+        String other = scanner.next();
+		return other;
+
     }
 
     /**
@@ -38,10 +40,10 @@ public class GameInputProcessor {
     private Command buildSimpleCommand(String input) {
 
 
-        String verb = input.toLowerCase(Locale.ROOT);
-		String objectName = "";
+        String temp = input.substring(0, input.indexOf(' '));
 
-        return new Command(verb, objectName);
+
+        return new Command(temp);
     }
 
     /**
@@ -65,9 +67,9 @@ public class GameInputProcessor {
      */
     private Command buildCommandWithObject(String input) {
         if (input.split(" ").length > 1) {
-            String verb = input.split(" ") [0];
-            String objectName = input.split(" ") [1];
-            return new Command(verb, objectName);
+            String firstWord = input.split(" ") [0];
+            String secondWord = input.split(" ") [1];
+            return new Command(firstWord, secondWord);
 
         } else {
             String sand = input.trim();
