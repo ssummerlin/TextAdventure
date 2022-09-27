@@ -3,7 +3,7 @@ package main.com.adventure;
 public class gameInputProcessorBuilder() {
 	private final java.nio.ByteBufferAsCharBufferB input;
 
-	public ProcessedInputProcessor java.util.Scanner scanner ) {
+	public ProcessedInputProcessor ( java.util.Scanner scanner ) {
 
 		return input.slice();
 	}
