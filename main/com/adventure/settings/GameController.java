@@ -222,11 +222,8 @@ public class GameController {
 		System.out.println("What is your name?");
 		String name = inputProcessor.getNextCommand().getObjectName();
 		player.setName(name);
-		if (player.getName
-				!= null) {
-			System.out.println("Welcome "
-					                   + player.getName()
-					                   + "!");
+		if (player.getName != null) {
+			System.out.println("Welcome "+ player.getName()+ "!");
 		}
 		else {
 			System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or "
@@ -234,7 +231,7 @@ public class GameController {
 			gameOver();
 		}
 	}
-}
+
     private void describeCurrentScene() {
         if (player.getCurrentLocation() == world.scenes.size()) {
             isInProgress = false;
