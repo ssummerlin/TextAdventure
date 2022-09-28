@@ -80,7 +80,7 @@ public class GameInputProcessor {
     }
 
 
-    /** DO NOT CHANGE ANYTHING BELOW THIS LINE. **/
+    /** DO NOT CHANGE ANYTHING BELO THIS LINE. **/
 
     /**
      * Gets the next command from the user.
