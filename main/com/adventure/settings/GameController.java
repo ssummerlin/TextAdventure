@@ -232,13 +232,14 @@ public class GameController {
 
 
 
-        System.out.println("You didn't enter a name. Please enter a name.");
+        System.out.println("You didn't enter a name. Please enter a name.")};
+            
             {
             System.out.println("Welcome to the game, " + player.getName() + "!");
         } else {
             System.out.println("Welcome to the game!");
         }
-        )) {
+         {
             System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " +
                     "the getName function.");
             gameOver();
