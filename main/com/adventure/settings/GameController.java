@@ -115,12 +115,12 @@ public class GameController {
     private void getNextCommand() {
         if (!isInProgress) {
             return;
-        
+        }
         Command command = inputProcessor.getNextCommand();
         applyCommand(command);
         getNextCommand();
 
-      
+        
     }
 
     private void applyCommand(Command command) {
