@@ -16,7 +16,6 @@ import main.com.adventure.world.scenes.SceneDescriptionNotFoundException;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicReference;
 
 public class GameController {
 
@@ -57,7 +56,7 @@ public class GameController {
         if (player.move(direction, isValid)) {
             describeCurrentScene();
         }
-        if (player.getCurrentLocation() == world.getScenes().size()) {
+        if (player.getCurrentLocation() == world.scenes.size()) {
             showEndgameMessage();
             gameOver();
         }
@@ -116,11 +115,10 @@ public class GameController {
         if (!isInProgress) {
             return;
         }
+
         Command command = inputProcessor.getNextCommand();
         applyCommand(command);
         getNextCommand();
-
-        
     }
 
     private void applyCommand(Command command) {
@@ -163,14 +161,11 @@ public class GameController {
     }
 
     private void dig() {
-        if (player.getShovel()
-            == null) {
-                System.out.println("You don't have a shovel with which to dig.");
-            }
-        else {
+        if (player.getShovel() != null) {
             getCurrentScene().dig();
-
-            describeCurrentScene("The ground has been dug up.");
+            describeCurrentScene();
+        } else {
+            System.out.println("You don't have a shovel with which to dig.");
         }
     }
 
@@ -223,53 +218,25 @@ public class GameController {
         System.out.println("That command is invalid");
     }
 
-    private void getName() {
-        System.out.println("\n\nBefore we get started, what's your name?");
-        String name = scanner.next();
-        player.setName(name);
-        if (player.getName == null) {
-            getName();
-
-
-
-        System.out.println("You didn't enter a name. Please enter a name.")};
-            
-            {
-            System.out.println("Welcome to the game, " + player.getName() + "!");
-        } 
-    } else {
-            System.out.println("Welcome to the game!");
-        }
-         {
-            System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " +
-                    "the getName function.");
-            gameOver();
-        } else {
-            System.out.println("Welcome " + player.getName() + "!");
-        }
-    }
-    }
-
-    public
-    void printHelp() {
-        System.out.println( "Here are the list of commands that you can type:" );
-        System.out.println( "- help (prints this message)" );
-        System.out.println( "- move <direction>" );
-        System.out.println( "- look <item>" );
-        System.out.println( "- take <item>" );
-        System.out.println( "- use <item>" );
-        System.out.println( "- use <item> on <item>" );
-        System.out.println( "- check items" );
-        System.out.println( "- dig" );
-    }
-
-    private
-    main.com.adventure.world.scenes.Scene getCurrentScene() {
-        return world.getScenes().get( player.getCurrentLocation() );
-    }
+	private void getName(){
+		System.out.println("What is your name?");
+		String name = inputProcessor.getNextCommand().getObjectName();
+		player.setName(name);
+		if (player.getName
+				!= null) {
+			System.out.println("Welcome "
+					                   + player.getName()
+					                   + "!");
+		}
+		else {
+			System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or "
+					                   + "the getName function.");
+			gameOver();
+		}
+	}
 }
     private void describeCurrentScene() {
-        if (player.getCurrentLocation() == world.getScenes().size()) {
+        if (player.getCurrentLocation() == world.scenes.size()) {
             isInProgress = false;
             return;
         }
@@ -277,7 +244,7 @@ public class GameController {
         System.out.println();
 
         try {
-            System.out.println( world.getScenes().get( player.getCurrentLocation() ).getDescription() );
+            System.out.println(world.scenes.get(player.getCurrentLocation()).getDescription());
         } catch (SceneDescriptionNotFoundException e) {
             e.printStackTrace();
             isInProgress = false;
@@ -325,13 +292,8 @@ public class GameController {
         }
     }
 
-/**
- *  Prints the help script to the user.
- */
-public void printHelp() {
-    if (AppSettings.story == AppSettings.Story.MT1_Beginning) {
-        return;
-     ) {
+    private Scene getCurrentScene() {
+        return world.scenes.get(player.getCurrentLocation());
+    }
 
-             }
 }
