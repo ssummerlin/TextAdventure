@@ -22,7 +22,7 @@ public class GameInputProcessor {
         System.out.println("Enter your next command:");
         Scanner nuInput = new Scanner(System.in);
         String other = nuInput.next();
-	return other;
+        return other;
 
     }
 
