@@ -10,7 +10,7 @@ class GameInputProcessorImpl extends main.com.adventure.GameInputProcessor {
 	static class input.ByteBufferAsCharBufferB(String input) {
 		this.input = input;
 		return (input.slice)
-				new class GameInputProcessor, String input );
+				( new class GameInputProcessor, String input );
 	}
 	}
 }
