@@ -5,10 +5,7 @@ public class AppSettings {
     /** You will update this property for each project. **/
     public static final Story story = Story.MT3_TestDirections;
 
-    private static
-    main.com.adventure.GameInputProcessor newGameInputProcessor(" Paper Airplane " ) {
-        return new main.com.adventure.GameInputProcessor();
-    }
+    
 
     public enum Story {
         TestScene,
