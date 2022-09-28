@@ -225,7 +225,8 @@ public class GameController {
         if (player.getName() != null) {
             System.out.println("Welcome " + player.getName() + "!");
         } else {
-            System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " + "the getName function.");
+            System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or" 
+            + "the getName function.");
             gameOver();
         }
     }
