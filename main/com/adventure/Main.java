@@ -1,5 +1,7 @@
 package main.com.adventure;
 
+import main.com.adventure.settings.GameController;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
@@ -7,7 +9,6 @@ public class Main {
 
     private static final GameController controller = new GameController();
     private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
-
 
     /**
      * The main function that gets run when the program starts.
@@ -17,26 +18,14 @@ public class Main {
         System.out.println("Welcome to the coding adventure game!");
         System.out.println("Your goal is to add code to the game that satisfies the requirements.");
 
-        controller.printHelp(" ");
+        controller.printHelp();
 
         System.out.println("You can type \"help\" at any time for a list of commands.");
 
         System.out.println("Whenever you're ready, press the return key.");
 
-        final java.lang.String s = scanner.nextLine();
+        scanner.nextLine();
 
-        if (s != null) {
-            controller.get().startGame();
-        }
-
-        while (scanner.hasNextLine()) {
-            final String input = scanner.nextLine();
-            if (input != null) {
-                final String output = controller.processInput(input);
-                System.out.println(output);
-            }
-        }
-    }
         controller.startGame();
 
     }
