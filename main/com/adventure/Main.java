@@ -5,11 +5,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static final ThreadLocal < main.com.adventure.settings.GameController > controller = ThreadLocal.withInitial(
-            () -> new main.com.adventure.settings.GameController() );
-    private static final
-    TSweet  {scanner = new Scanner( System.in,
-                                 StandardCharsets.UTF_8);
+    private static final GameController controller = new GameController();
+    private static final Scanner scanner = new Scanner(System.in, StandardCharsets.UTF_8);
 
 
     /**
