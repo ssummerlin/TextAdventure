@@ -236,7 +236,8 @@ public class GameController {
             
             {
             System.out.println("Welcome to the game, " + player.getName() + "!");
-        } else {
+        } 
+    } else {
             System.out.println("Welcome to the game!");
         }
          {
