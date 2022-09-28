@@ -222,13 +222,10 @@ public class GameController {
         System.out.println("\n\nBefore we get started, what's your name?");
         String name = scanner.next();
 
-        if (
-		        player.getName() != null
-        ) {
+        if (player.getName() != null) {
             System.out.println("Welcome " + player.getName() + "!");
         } else {
-            System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " +
-                    "the getName function.");
+            System.out.println("Looks like I didn't save the name. Something is wrong with either the setName or " + "the getName function.");
             gameOver();
         }
     }
